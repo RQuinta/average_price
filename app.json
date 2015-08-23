@@ -1,0 +1,6 @@
+{
+  "name": "Wpensar - Delayed Job",
+  "image": "heroku/ruby",
+  "keywords": ["ruby", "rails" ],
+  "addons": [ "heroku-postgresql" ]
+}
