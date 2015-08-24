@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
-ruby '2.2.3'
+ruby '2.1.2'
 
 gem 'rails', '4.2.3'
 gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'responders'
+gem 'has_scope'
 gem 'rails-observers'
 gem 'delayed_job_active_record'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
