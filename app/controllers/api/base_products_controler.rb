@@ -13,10 +13,6 @@ class Api::BaseProcutsController < ApplicationController
     render json: @base_product
   end
 
-  def show
-    respond_with :api, @base_product
-  end
-
   def destroy
     @base_product.destroy
     respond_with :api, @base_product
