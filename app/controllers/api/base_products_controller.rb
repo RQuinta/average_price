@@ -5,12 +5,16 @@ class Api::BaseProductsController < ApplicationController
   before_action :set_base_product, only: [:update, :destroy]
 
   def index
-    respond_with(BaseProduct).all
+    respond_with(BaseProduct.all)
   end
 
   def create
     @base_product = BaseProduct.create base_product_params
-    render json: @base_product
+    respond_with :api, @base_product
+  end
+
+  def show
+    respond_with :api, @base_product
   end
 
   def destroy

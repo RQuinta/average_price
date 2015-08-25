@@ -1,7 +1,6 @@
 class PurchasedProductsPriceUpdater
 
   def initialize(purchased_product)
-    @purchased_product = purchased_product
     @base_product = BaseProduct.find(purchased_product.base_product_id)
   end
 
@@ -10,7 +9,7 @@ class PurchasedProductsPriceUpdater
     @base_product.average_price = average_price_purchased_product_calculator(purchased_products)
     @base_product.save
   end
-  # handle_asynchronously :update_price,:run_at => Proc.new { 1.minutes.from_now }
+  handle_asynchronously :update_price,:run_at => Proc.new { 1.minutes.from_now }
 
   private
 
