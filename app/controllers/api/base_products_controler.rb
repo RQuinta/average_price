@@ -1,8 +1,8 @@
-class Api::BaseProcutsController < ApplicationController
+class Api::BaseProductsController < ApplicationController
 
   respond_to :json
 
-  before_action :set_produto, only: [:update, :destroy]
+  before_action :set_base_product, only: [:update, :destroy]
 
   def index
     respond_with(BaseProduct).all

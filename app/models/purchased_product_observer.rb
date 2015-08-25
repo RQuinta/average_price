@@ -4,5 +4,4 @@ class PurchasedProductObserver < ActiveRecord::Observer
     PurchasedProductsPriceUpdater.new(purchased_product).update_price
   end
 
-
 end
